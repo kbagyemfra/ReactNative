@@ -27,7 +27,7 @@ const ToForm = () => {
   const submitHandler = (text) => {
     if (text.length > 3) {
       const prevTodo = (prevTodos) => {
-        return [{ text: text, key: Math.random().toString() }, ...prevTodos];
+        return [...prevTodos, { text: text, key: Math.random().toString() }];
       };
       setTodos(prevTodo);
     } else {
@@ -53,10 +53,10 @@ const ToForm = () => {
 };
 
 const styles = StyleSheet.create({
-  containers: {
+  list: {
+    marginTop: 40,
     flex: 1,
   },
-  list: { marginTop: 40 },
 });
 
 export default ToForm;

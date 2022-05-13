@@ -5,22 +5,26 @@ import {
   View,
 } from "react-native";
 import Header from "./components/Header";
+import Sandbox from "./components/SandBox";
 import ToForm from "./components/ToForm";
 
 export default function App() {
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        Keyboard.dismiss();
-      }}
-    >
-      <View style={styles.container}>
-        <Header />
-        <View style={styles.content}>
-          <ToForm />
+    <>
+      {/* <Sandbox /> */}
+      <TouchableWithoutFeedback
+        onPress={() => {
+          Keyboard.dismiss();
+        }}
+      >
+        <View style={styles.container}>
+          <Header />
+          <View style={styles.content}>
+            <ToForm />
+          </View>
         </View>
-      </View>
-    </TouchableWithoutFeedback>
+      </TouchableWithoutFeedback>
+    </>
   );
 }
 
@@ -32,5 +36,7 @@ const styles = StyleSheet.create({
   content: {
     padding: 30,
     fontSize: 24,
+    // backgroundColor: "#00FFFF",
+    flex: 1,
   },
 });

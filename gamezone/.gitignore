@@ -9,7 +9,6 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-textApp.js
 
 # macOS
 .DS_Store
