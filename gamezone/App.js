@@ -2,7 +2,6 @@ import * as Font from "expo-font";
 import Splash from "./Screens/Splash";
 import "react-native-gesture-handler";
 import Stacks from "./routes/Stacks";
-import Draw from "./Screens/Draw";
 
 export default function App() {
   // Fonts
@@ -21,7 +20,7 @@ export default function App() {
 
   return (
     <>
-      <Draw />
+      <Stacks />
     </>
   );
 }

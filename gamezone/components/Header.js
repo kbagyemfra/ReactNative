@@ -1,25 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, ImageBackground } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { globalStyles } from "../styles/global";
 
-const Header = () => {
+const Header = ({ navigation }) => {
+  // console.log(navigation);
+
   const openMenu = () => {
-    console.log("Jesus");
+    // navigation.openDrawer();
   };
 
   return (
     <>
-      <View style={globalStyles.head}>
-        {/* Icon */}
-        <MaterialIcons
-          name="menu"
-          size={28}
-          onPress={openMenu}
-          style={globalStyles.icon}
+      <View style={globalStyles.headerTitle}>
+        <Image
+          source={require("../assets/heart_logo.png")}
+          style={globalStyles.headerImage}
         />
-        <View>
-          <Text style={globalStyles.headText}>GameZone</Text>
-        </View>
+        <Text style={globalStyles.headText}>GameZone</Text>
       </View>
     </>
   );
